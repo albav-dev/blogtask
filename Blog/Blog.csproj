@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\content\css\**" />
+    <Compile Remove="wwwroot\content\fonts\**" />
+    <Compile Remove="wwwroot\content\images\**" />
+    <Compile Remove="wwwroot\content\js\**" />
+    <Compile Remove="wwwroot\content\revolution\**" />
+    <Content Remove="wwwroot\content\css\**" />
+    <Content Remove="wwwroot\content\fonts\**" />
+    <Content Remove="wwwroot\content\images\**" />
+    <Content Remove="wwwroot\content\js\**" />
+    <Content Remove="wwwroot\content\revolution\**" />
+    <EmbeddedResource Remove="wwwroot\content\css\**" />
+    <EmbeddedResource Remove="wwwroot\content\fonts\**" />
+    <EmbeddedResource Remove="wwwroot\content\images\**" />
+    <EmbeddedResource Remove="wwwroot\content\js\**" />
+    <EmbeddedResource Remove="wwwroot\content\revolution\**" />
+    <None Remove="wwwroot\content\css\**" />
+    <None Remove="wwwroot\content\fonts\**" />
+    <None Remove="wwwroot\content\images\**" />
+    <None Remove="wwwroot\content\js\**" />
+    <None Remove="wwwroot\content\revolution\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\PostCategory\PostCategories.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="appsettings.production.json" />
+  </ItemGroup>
+
+  <!--<ItemGroup>
+    <Folder Include="wwwroot\content\blog\" />
+    <Folder Include="wwwroot\content\static\" />
+  </ItemGroup>-->
+  
+  <ItemGroup>
+    <Content Update="wwwroot/content/blog/*.*" CopyToPublishDirectory="Never" />
+    <Content Update="wwwroot/content/static/*.*" CopyToPublishDirectory="Never" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MailKit" Version="2.11.1" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="PhotoSauce.MagicScaler" Version="0.12.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\PostCategory\" />
+  </ItemGroup>
+
+</Project>
